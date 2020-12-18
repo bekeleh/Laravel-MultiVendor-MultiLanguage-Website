@@ -10,9 +10,10 @@
                 <div class="card-body">
                     <h4 class="card-title">{{ $product->name }}</h4>
                     <p class="card-text">{{ $product->description }}</p>
+                    <h3 class="card-text">$ {{ $product->price }}</h3>
                 </div>
                 <div class="card-body d-flex justify-content-center">
-                    <a class="btn btn-primary" href="#" class="card-link">Add To Cart</a>
+                    <a class="btn btn-primary" href="{{route('cart.add', $product->id)}}" class="card-link">Add To Cart</a>
                     <a class="btn btn-info" href="#" class="card-link">Show Product</a>
                 </div>
             </div>
