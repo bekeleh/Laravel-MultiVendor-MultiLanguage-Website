@@ -31,4 +31,5 @@
     </table>
 
     <h3>Total Price: {{Cart::getTotal() }}</h3>
+    <a class="btn btn-primary" href="{{route('cart.checkout')}}">Check Out</a>
 @endsection

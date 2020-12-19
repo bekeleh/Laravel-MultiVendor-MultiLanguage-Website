@@ -41,7 +41,11 @@
                         <li class="nav-item">
                             <a class="nav-link p-0 m-0" href="{{ route('cart.index') }}">
                                 <i class="fas fa-cart-arrow-down text-primary fa-2x"></i>
-                                <div class="badge badge-info">{{Cart::getContent()->count()}}</div>
+                                @if (Cart::getContent()->count() > 0)
+                                    <div class="badge badge-info">{{Cart::getContent()->count()}}</div>
+                                @else
+                                    <div class="badge badge-info">0</div>
+                                @endif
                             </a>
                         </li>
                         <!-- Authentication Links -->

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Product;
 use Darryldecode\Cart\Cart;
 use Illuminate\Http\Request;
@@ -44,5 +45,10 @@ class CartController extends Controller
         ]);
 
         return back();
+    }
+
+    public function checkout()
+    {
+        return view('cart.checkout');
     }
 }
